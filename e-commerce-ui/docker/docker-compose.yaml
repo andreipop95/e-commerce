@@ -1,0 +1,14 @@
+networks:
+  application:
+    external:
+      name: db_application
+
+services:
+  angular-frontend:
+    build:
+      context: "../"
+      dockerfile: docker/Dockerfile
+    ports:
+      - 4201:4200
+    networks:
+      - application

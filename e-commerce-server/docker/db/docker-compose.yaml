@@ -1,0 +1,18 @@
+
+networks:
+  db_application:
+    external: true
+
+services:
+  mariadb:
+    image: mariadb:10.5.3
+    restart: always
+    networks:
+      - db_application
+    environment:
+      MYSQL_DATABASE: e-commerce
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+    ports:
+      - 3308:3306

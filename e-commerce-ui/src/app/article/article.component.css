@@ -1,0 +1,9 @@
+.article-card {
+  max-width: 30%;
+  margin: 4px
+}
+
+.error {
+  color: red;
+}
+

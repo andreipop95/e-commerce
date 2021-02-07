@@ -1,0 +1,24 @@
+<div class="container add-div">
+  <form [formGroup]="articleForm" (ngSubmit)="submitArticle(articleForm.value)" class="form">
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Article name</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Price</mat-label>
+      <input matInput formControlName="price">
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Description</mat-label>
+      <input matInput formControlName="description">
+    </mat-form-field>
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Available stock</mat-label>
+      <input matInput formControlName="availableStock">
+    </mat-form-field>
+
+    <div class="form-element">
+      <button mat-raised-button color="primary" type="submit" class="button">Submit Article</button>
+    </div>
+  </form>
+</div>

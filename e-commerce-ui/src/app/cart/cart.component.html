@@ -1,0 +1,14 @@
+<h1>Articles from shopping cart</h1>
+<div *ngIf="shoppingCart">
+  <div *ngFor="let item of shoppingCart.orderItems">
+    <mat-card class="article-card">
+      <mat-card-title>{{ item.articleDTO.name }}</mat-card-title>
+      <mat-card-subtitle>{{ item.articleDTO.description }}</mat-card-subtitle>
+      <div>Quantity: {{ item.quantity }}</div>
+
+      <mat-card-actions>
+        <button mat-button (click)="removeOrderItem(item)">Remove item</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
